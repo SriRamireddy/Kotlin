@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">FirstKotlinTOTDiceGame</string>
+    <string name="data">Please do the following assignments For Dice Roller, Create two dices with the feature to roll them at once. Both the dices should show a value of their own. Also, Create an upcount button, which when clicked updates both the dices by value 1. If any dice has value 6, Nothing should happen. If upcount button is clicked without rolling the dice, it should display 1. Submit all your assignments keeping them in the github account. Share the links to your repositories in the form shared to you. Thanks
+    Please do the following assignments For Dice Roller, Create two dices with the feature to roll them at once. Both the dices should show a value of their own. Also, Create an upcount button, which when clicked updates both the dices by value 1. If any dice has value 6, Nothing should happen. If upcount button is clicked without rolling the dice, it should display 1. Submit all your assignments keeping them in the github account. Share the links to your repositories in the form shared to you. Thanks
+    </string>
+</resources>
