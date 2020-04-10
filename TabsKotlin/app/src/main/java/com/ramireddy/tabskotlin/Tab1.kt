@@ -1,6 +1,8 @@
 package com.ramireddy.tabskotlin
 
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -28,6 +30,10 @@ class Tab1 : Fragment() {
     }
 
     private fun makecall() {
+
+        val i : Intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:9502491310"))
+        startActivity(i)
+
         val toast : Toast = Toast.makeText(activity,"hello",Toast.LENGTH_LONG)
         toast.show()
     }

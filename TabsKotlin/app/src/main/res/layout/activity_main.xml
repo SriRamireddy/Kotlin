@@ -11,6 +11,8 @@
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:tabTextColor="#FFFF"
+        android:background="@color/colorPrimary"
         android:id="@+id/tabid"/>
 
     <androidx.viewpager.widget.ViewPager
