@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.ramireddy.charadegamekotlin.TitleFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_gameFrag"
+            app:destination="@id/gameFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFrag"
+        android:name="com.ramireddy.charadegamekotlin.GameFrag"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFrag_to_scoreFrag"
+            app:destination="@id/scoreFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFrag"
+        android:name="com.ramireddy.charadegamekotlin.ScoreFrag"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" />
+</navigation>
