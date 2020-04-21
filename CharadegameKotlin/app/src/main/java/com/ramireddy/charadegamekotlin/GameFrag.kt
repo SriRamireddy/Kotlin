@@ -25,9 +25,7 @@ class GameFrag : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
          val v : View = inflater.inflate(R.layout.fragment_game, container, false)
-
         gameViewModel = ViewModelProvider(this).get(GameViewModel::class.java)
-
         score_tv = v.findViewById(R.id.tv_score)
         word_tv = v.findViewById(R.id.tv_word)
         val gotit = v.findViewById<Button>(R.id.btn_gotit)
@@ -47,20 +45,16 @@ class GameFrag : Fragment() {
             initViews()
             gameViewModel.resetWords()
         }
-
         gotit.setOnClickListener {
             gameViewModel.updatePositiveScore()
             score_tv.text = gameViewModel.score.toString()
             initViews()
         }
-
         skip.setOnClickListener {
             gameViewModel.updateNegativeScore()
             score_tv.text = gameViewModel.score.toString()
             initViews()
         }
-
-
         return v
     }
     private fun initViews() {
