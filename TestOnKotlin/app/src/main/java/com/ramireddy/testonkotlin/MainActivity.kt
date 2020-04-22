@@ -54,22 +54,19 @@ class MainActivity : AppCompatActivity() {
         val inputStream : InputStream = httpsURLConnection.inputStream
         val text = inputStream.bufferedReader().use(BufferedReader::readText)
         withContext(Dispatchers.Main){
-
             val root  = JSONObject(text)
-
             val arrayAll : JSONArray = root.getJSONArray("all")
            // for(i in 0..arrayAll.length()-1) {
-            for(i in 0..5) {
+            for(i in 0..50) {
                 val poObj: JSONObject = arrayAll.getJSONObject(i)
                 val datatype : String = poObj.getString("type")
                 val datarate : String = poObj.getString("upvotes")
                 typeList.add(datatype)
                 rateList.add(datarate)
-               // sb.append(datatype+" "+datarate)
             }
             val toast: Toast = Toast.makeText(this@MainActivity, typeList.size.toString(), Toast.LENGTH_SHORT)
             toast.show()
-            val adapter1 : MyRecyclerAdapter = MyRecyclerAdapter(this@MainActivity,typeList,rateList)
+            val adapter1 = MyRecyclerAdapter(this@MainActivity,typeList,rateList)
             recyclerview.adapter = adapter1
         }
     }
