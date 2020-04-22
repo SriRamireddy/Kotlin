@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -29,10 +30,15 @@ class MainActivity : AppCompatActivity() {
 
     val url : String = "https://cat-fact.herokuapp.com/facts"
 
+    private lateinit var linearLayoutManager: LinearLayoutManager
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         recyclerview = findViewById(R.id.recycler)
+        linearLayoutManager = LinearLayoutManager(this)
+        recyclerview.layoutManager = linearLayoutManager
     }
 
     fun getData(view: View) {
@@ -63,7 +69,8 @@ class MainActivity : AppCompatActivity() {
             }
             val toast: Toast = Toast.makeText(this@MainActivity, typeList.size.toString(), Toast.LENGTH_SHORT)
             toast.show()
-            MyRecyclerAdapter(this@MainActivity,typeList,rateList)
+            val adapter1 : MyRecyclerAdapter = MyRecyclerAdapter(this@MainActivity,typeList,rateList)
+            recyclerview.adapter = adapter1
         }
     }
 
@@ -81,9 +88,9 @@ class MainActivity : AppCompatActivity() {
 
         override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
-            //holder.dType.text = rMutableList.get(position).toString()
-            holder.dType.text = "sample "+position
-           // holder.dRate.text = rMutableRateList.get(position)
+            holder.dType.text = rMutableList.get(position).toString()
+            //holder.dType.text = "sample "+position
+            holder.dRate.text = rMutableRateList.get(position).toString()
 
         }
 
