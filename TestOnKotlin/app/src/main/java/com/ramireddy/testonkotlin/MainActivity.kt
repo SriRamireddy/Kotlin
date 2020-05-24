@@ -40,15 +40,12 @@ class MainActivity : AppCompatActivity() {
         linearLayoutManager = LinearLayoutManager(this)
         recyclerview.layoutManager = linearLayoutManager
     }
-
     fun getData(view: View) {
         CoroutineScope(Dispatchers.IO).launch {
             getJsonData()
         }
     }
-
     suspend fun getJsonData() {
-
         val url = URL(url)
         val httpsURLConnection : HttpsURLConnection = url.openConnection() as HttpsURLConnection
         val inputStream : InputStream = httpsURLConnection.inputStream
@@ -70,8 +67,6 @@ class MainActivity : AppCompatActivity() {
             recyclerview.adapter = adapter1
         }
     }
-
-
 
     class MyRecyclerAdapter ( val context : Context,data:MutableList<String>,rate: MutableList<String>):
         RecyclerView.Adapter<MyRecyclerAdapter.MyViewHolder>() {

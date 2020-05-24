@@ -1,0 +1,2 @@
+rootProject.name='ThreadPlaces'
+include ':app'

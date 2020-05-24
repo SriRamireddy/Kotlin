@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
+        android:layout_margin="10dp"
+        android:src="@drawable/corona"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Covid - 19 Updates "
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Cases : \n0"
+        android:id="@+id/total_cases"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textColor="@color/whitecolor"
+        android:layout_margin="2dp"
+        android:background="#FF9800"
+        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Todat Recover :\n 0"
+            android:id="@+id/total_recovered"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/whitecolor"
+            android:layout_weight="1"
+            android:background="#4CAF50"
+            android:layout_margin="2dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Active Cases:\n0"
+        android:id="@+id/total_active_cases"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@color/whitecolor"
+        android:layout_weight="1"
+        android:layout_margin="2dp"
+        android:background="#ff00"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Critical Cases : \n0"
+        android:id="@+id/total_critical_cases"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textColor="@color/whitecolor"
+        android:background="#ff00"
+        android:layout_margin="2dp"
+        />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Today Cases : \n0"
+            android:id="@+id/today_cases"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="#ff00"
+            android:textColor="@color/whitecolor"
+            android:layout_margin="2dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Effected Countries : \n0"
+            android:id="@+id/total_effected_countries"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:textColor="@color/whitecolor"
+            android:background="#ff00"
+            />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Today Deaths :\n 0"
+        android:id="@+id/today_deaths"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:background="#ff00"
+        android:textColor="@color/whitecolor"
+        android:layout_margin="2dp"
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Deaths : \n0"
+            android:id="@+id/total_deaths"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:textColor="@color/whitecolor"
+            android:background="#ff00"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Country Wide"
+        android:onClick="gotoCounties"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Every 10mins once It Will Update"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"/>
+</LinearLayout>
+</ScrollView>

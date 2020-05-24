@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Covid - 19 Updates</string>
+    <string name="symtops">Symptoms:</string>
+    <string name="syptomssteps">
+        1.Cold and dry cough/జలుబు మరియు
+        పొడి దగ్గు.\n
+        2.fever/జ్వరం.\n
+        3.tiredness/అలసట.\n
+        </string>
+    <string name="precautions"/>
+    <string name="precautionssteps">
+        1.Stay At Home\n
+        2.Keep a safe Distance\n
+        3.Wash hands aften\n
+        4.Cover your Cough\n
+        5.<b>SICK ?</b> Call the helpline
+    </string>
+</resources>

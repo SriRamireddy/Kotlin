@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/whitecolor"
+    android:layout_margin="5dp">
+
+
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:src="@drawable/af"
+        android:id="@+id/country_flag"
+        android:scaleType="fitXY"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Country Name"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/whitecolor"
+            android:id="@+id/country_name"
+            android:gravity="center"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Cases"
+            android:textColor="@color/whitecolor"
+            android:id="@+id/country_total_case"
+            android:layout_weight="1"
+            android:gravity="center"
+            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Active"
+                android:textColor="@color/whitecolor"
+                android:id="@+id/country_total_active"
+                android:layout_weight="1"
+                android:gravity="center"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deaths"
+                android:textColor="@color/whitecolor"
+                android:id="@+id/country_total_deaths"
+                android:layout_weight="1"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recovered"
+                android:textColor="@color/whitecolor"
+                android:id="@+id/country_total_recovered"
+                android:layout_weight="1"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Today cases"
+                android:layout_weight="1"
+                android:textColor="@color/whitecolor"
+                android:id="@+id/country_today_cases"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Deaths"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/whitecolor"
+                android:id="@+id/country_today_deaths"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
